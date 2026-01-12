@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+  }
+  
+  body{
+    background:#020111;
+    overflow-x:hidden;
+  }
+  
+  /* 🌌 CANVAS BACKGROUND */
+  #bgStars,#bgMeteors{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+  }
+  
+  /* 🎆 FIREWORKS */
+  #fireworks{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+    background:transparent;
+  }
+  
+  /* 🌙 MOON */
+  .moon{
+    position:absolute;
+    top:50px;
+    right:60px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    box-shadow:-30px 0 0 white;
+    opacity:0.9;
+  }
+  
+  /* 🔒 LOCK SCREEN */
+  .lock{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:5;
+  }
+  
+  .lock-ui{
+    text-align:center;
+    color:white;
+  }
+  
+  .lock-ui input{
+    padding:12px;
+    width:220px;
+    border-radius:25px;
+    border:none;
+    margin:15px 0;
+  }
+  
+  .lock-ui button{
+    padding:10px 30px;
+    border-radius:25px;
+    border:none;
+    background:#ff5fa2;
+    color:white;
+  }
+  
+  #error{color:pink}
+  
+  /* 🌑 BACKEND */
+  #content{display:none}
+  
+  .slide{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+  }
+  
+  /* 🎁 GIFT */
+  .gift-box{
+    width:160px;
+    height:160px;
+    position:relative;
+    cursor:pointer;
+    animation:float 3s infinite ease-in-out;
+  }
+  
+  @keyframes float{
+    50%{transform:translateY(-15px)}
+  }
+  
+  .box{
+    width:100%;
+    height:100%;
+    background:linear-gradient(#ff5fa2,#ff2f92);
+    border-radius:16px;
+    box-shadow:0 0 30px #ff5fa2;
+  }
+  
+  .lid{
+    position:absolute;
+    top:-36px;
+    width:100%;
+    height:36px;
+    background:#ffd1e8;
+    transform-origin:bottom;
+  }
+  
+  .ribbon{
+    position:absolute;
+    background:gold;
+  }
+  
+  .ribbon.vertical{
+    width:20px;
+    height:100%;
+    left:50%;
+    transform:translateX(-50%);
+  }
+  
+  .ribbon.horizontal{
+    width:100%;
+    height:20px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  
+  /* 🎂 CAKE */
+  .cake2d{
+    width:220px;
+    height:90px;
+    background:linear-gradient(#ffe0e9,#ff8acb);
+    border-radius:18px;
+    box-shadow:0 0 25px pink;
+    cursor:pointer;
+    position:relative;
+  }
+  
+  .candle{
+    width:10px;
+    height:40px;
+    background:white;
+    position:absolute;
+    top:-40px;
+  }
+  
+  .candle:nth-child(1){left:55px}
+  .candle:nth-child(2){left:105px}
+  .candle:nth-child(3){left:155px}
+  
+  .flame{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    width:14px;
+    height:18px;
+    background:radial-gradient(circle,gold,orange,transparent);
+    border-radius:50%;
+    transform:translateX(-50%);
+    animation:flicker .6s infinite alternate;
+  }
+  
+  @keyframes flicker{
+    to{transform:translateX(-50%) scale(1.2)}
+  }
+  
+  /* 🎈 BALLOONS */
+  .balloon{
+    position:fixed;
+    bottom:-100px;
+    width:40px;
+    height:55px;
+    border-radius:50%;
+    animation:floatUp 7s linear forwards;
+  }
+  
+  @keyframes floatUp{
+    to{transform:translateY(-130vh)}
+  }
+  
+  .hidden{display:none}
+  

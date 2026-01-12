@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Night Surprise 🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌌 STAR BACKGROUND (LOCK + BACKEND) -->
+<canvas id="bgStars"></canvas>
+<canvas id="bgMeteors"></canvas>
+
+<!-- 🔒 LOCK SCREEN -->
+<div id="lockScreen" class="lock">
+  <div class="moon"></div>
+
+  <div class="lock-ui">
+    <h1>🌙 A Special Birthday Night</h1>
+    <p>Enter the secret code ✨</p>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="unlock()">Unlock</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<!-- 🎆 FIREWORKS -->
+<canvas id="fireworks"></canvas>
+
+<!-- 🌑 BACKEND CONTENT -->
+<div id="content">
+
+  <!-- 🎁 GIFT -->
+  <section class="slide center" id="giftSlide">
+    <div class="gift-box" onclick="openGift()">
+      <div class="lid"></div>
+      <div class="ribbon vertical"></div>
+      <div class="ribbon horizontal"></div>
+      <div class="box"></div>
+    </div>
+    <h1>🎁 A Birthday Surprise Just for You</h1>
+    <p>Touch the gift to continue 💖</p>
+  </section>
+
+  <!-- 🎂 CAKE -->
+  <section class="slide center" id="cakeSlide">
+    <div class="cake2d" onclick="blowCandles()">
+      <div class="candle"><span class="flame"></span></div>
+      <div class="candle"><span class="flame"></span></div>
+      <div class="candle"><span class="flame"></span></div>
+    </div>
+
+    <h1 id="wishText" class="hidden">🎂 Happy Birthday Kalyani 🎂</h1>
+    <p id="wishSub" class="hidden">May your life glow brighter than these candles ✨</p>
+  </section>
+
+  <!-- 💖 QUOTES -->
+  <section class="slide center">
+    <h1>💖 You Are Truly Special</h1>
+    <p>May happiness follow you everywhere 😊</p>
+  </section>
+
+  <section class="slide center">
+    <h1>🌟 Keep Smiling Always</h1>
+    <p>The world is brighter because of you 😊</p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
